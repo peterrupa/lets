@@ -1,0 +1,15 @@
+/*****************************************************************************/
+/* Finding: Style */
+/*****************************************************************************/
+.finding {
+    height: 100vh;
+    background: #f1f1f1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#magglass {
+    transition: all 0.5s;
+}

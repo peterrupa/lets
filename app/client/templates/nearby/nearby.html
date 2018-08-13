@@ -1,0 +1,30 @@
+<template name="Nearby">
+    <div class="row no-margin">
+        <div class="col s12">
+            <h5 style="margin: 5px 0;">Nearby Places</h5>
+        </div>
+    </div>
+    
+    <div style="height: calc(100vh - 56px - 35px - 56px);overflow:auto">
+        {{#each places}}
+            {{> Place
+                name=name
+                description=description
+                img=img
+            }}
+        {{/each}}
+    </div>
+    
+    <div class="row">
+        <div class="col s6">
+            <div class="left">
+                <a href="/finding" class="btn-flat">Anywhere</a>
+            </div>
+        </div>
+        <div class="col s6">
+            <div class="right">
+                <a href="/finding" class="btn blue waves-effect waves-light">Next</a>
+            </div>
+        </div>
+    </div>
+</template>

@@ -1,0 +1,16 @@
+/*****************************************************************************/
+/* Groupchat: Style */
+/*****************************************************************************/
+.groupchat {
+    background: #f0f0f0;
+}
+
+#chatbox {
+    height: calc(100vh - 20vh - 56px - 36px + 20px);
+    overflow: auto;
+}
+
+#input {
+    height: 10vh;
+    overflow: hidden;
+}

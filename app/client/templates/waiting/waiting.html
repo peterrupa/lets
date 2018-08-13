@@ -1,0 +1,29 @@
+<template name="Waiting">
+    <div class="waiting">
+        <p>You are waiting for</p>
+        <strong>Anne Kristine</strong>
+        <div class="center">
+            <!---->
+                {{> Bob
+                    img='/me.jpg'
+                    x='27.5%'
+                    y='32%'
+                }}
+                
+                {{> Bob
+                    img='/tin.jpg'
+                    x=(add tin.x '%')
+                    y=(add tin.y '%')
+                }}
+                
+                {{> Bob
+                    img='/kfc.png'
+                    x='46%'
+                    y='53%'
+                }}
+            <!---->
+            <img src="/map.png" style="width: 80%;height: 50%;">
+        </div>
+        <a href="/letseat" id="we-met" class="btn waves-effect waves-light green" style="margin-top:30px;">We met!</a>
+    </div>
+</template>

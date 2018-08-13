@@ -1,0 +1,49 @@
+<template name="Groupchat">
+    <div class="groupchat">
+        <div class="row" style="padding-top: 20px;">
+            <div class="col s12">
+                <div class="left">
+                    <a href="/letseat" class="btn-flat">
+                        <i class="mdi-content-clear red-text" style="font-size:350%"></i>
+                    </a>
+                </div>
+                <div class="right">
+                    <a href="/waiting" class="btn-flat">
+                        <i class="mdi-action-done green-text" style="font-size:350%"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- chatbox -->
+        <div id="chatbox">
+            {{#each messages}}
+                {{#if (equal type 'event')}}
+                    {{> Eventmessage message=message}}
+                {{else}}
+                    {{#if (equal sender 'her')}}
+                        {{> Herchat message=message}}
+                    {{else}}
+                        {{> Yourchat message=message}}
+                    {{/if}}
+                {{/if}}
+                
+            {{/each}}
+        </div>
+        
+        <!-- input box -->
+        <div id="input">
+            <form id="chatform">
+                <div class="row">
+                    <div class="col s12" style="display:flex;align-items:center;justify-content:center;"> 
+                        <input id="chattextbox" type="text" autocomplete="off"/>
+                    
+                        <button class="btn-flat" style="padding: 0 10px;">
+                            <i class="mdi-content-send" style="font-size: 200%"></i>
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</template>
